@@ -33,10 +33,11 @@
 
         <div class="video-container" clear="both">
             <h3>Vidéo de démonstration</h3>
-            <video controls width="600">
-                <source src="../videos/Vidéo Projet G1-G2.mp4" type="video/mp4">
-                Votre navigateur ne supporte pas la balise vidéo.
-            </video>
+            <div style="position:relative; max-width: 600px; margin: 0 auto;">
+                <div style="padding:56.25% 0 0 0;position:relative;">
+                    <iframe src="https://player.vimeo.com/video/1027631400?title=0&amp;byline=0&amp;portrait=0&amp;badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479" frameborder="0" allow="autoplay; fullscreen; picture-in-picture; clipboard-write" style="position:absolute;top:0;left:0;width:100%;height:100%;" title="Vidéo Projet G1-G2"></iframe>
+                </div>
+            </div>
         </div>
         
         <section class="project-steps">
@@ -48,18 +49,18 @@
                 </p>
             </div>
             <div class="step">
-                <p>Après une comparaison des différentes technologies, nous avons opté pour une éolienne à axe vertical et un système
+                <p><span>Etude des options technologiques: </span>Après une comparaison des différentes technologies, nous avons opté pour une éolienne à axe vertical et un système
                     de capture de CO₂ basé sur des matériaux microporeux. Les techniques de capture existantes étant principalement
                     conçues pour de grandes échelles, cette innovation nécessitait donc un design entièrement nouveau.
                 </p>
             </div>
             <div class="step">
-                <p>Parmi les matériaux possibles, le charbon actif s’est révélé le plus rentable et performant. Pour améliorer son
+                <p><span>Choix du matériau absorbant: </span>Parmi les matériaux possibles, le charbon actif s’est révélé le plus rentable et performant. Pour améliorer son
                     absorption, nous l’avons dopé avec une solution d’amines, ce qui s’est avéré efficace lors des tests expérimentaux.
                 </p>
             </div>
             <div class="step">
-                <p>Le principe et le dimensionnement du système a découlé du choix d'utiliser du charbon actif.
+                <p><span>Dimensionnement du système de capture: </span>Le principe et le dimensionnement du système a découlé du choix d'utiliser du charbon actif.
                     Le système fonctionne par cycles d’absorption et de désorption. L’air traverse d'abord le matériau grâce à
                     une hélice. Ensuite, pour désorber le CO₂, une mise sous vide de la chambre
                     de capture accompagnée d'un chauffage décompose les liaisons chimiques du CO₂, permettant son stockage dans
@@ -69,26 +70,32 @@
                     la capacité nécessaire pour la batterie de Hive Electric à intégrer au système, ainsi que la puissance à fournir
                     par l'éolienne pour maintenir un fonctionnement en continu.
                 </p>
-                <img src="../images/Eolienne/Systeme Capture.png" alt="Image étape 4" class="step-image">
-                <img src="../images/Eolienne/Intérieur Chambre.jpg" alt="Image étape 4" class="step-image">
+                <div class="step-images-container">
+                    <img src="../images/Eolienne/Systeme Capture.png" alt="Image étape 4" class="step-image" id="onshape">
+                    <img src="../images/Eolienne/Intérieur Chambre.jpg" alt="Image étape 4" class="step-image" id="interieur">
+                </div>
             </div>
             <div class="step">
-                <p>Le dimensionnement de l’éolienne dépendait des besoins énergétiques du système de capture. La puissance requise
+                <p><span>Eolienne et batterie: </span>Le dimensionnement de l’éolienne dépendait des besoins énergétiques du système de capture. La puissance requise
                     a ainsi été définie, et la taille et le design de l’éolienne choisis en conséquence. La fabrication a été
                     réalisée dans les ateliers de l’école, et les tests ont confirmé le bon fonctionnement du chargement de la
                     batterie via un régulateur de charge PWM adaptant la tension de sortie de notre moteur (un
                     générateur à aimants permanents).
                 </p>
-                <img src="../images/Eolienne/Eolienne.png" alt="Image étape 4" class="step-image">
-                <img src="../images/Eolienne/Moteur.png" alt="Image étape 4" class="step-image">
+                <div class="step-images-container">
+                    <img src="../images/Eolienne/Eolienne.png" alt="Image étape 4" class="step-image" id="eolienne">
+                    <img src="../images/Eolienne/Moteur.png" alt="Image étape 4" class="step-image" id="moteur">
+                </div>
             </div>
             <div class="step">
-                <p>L'ensemble est contrôlé par un Arduino, qui active divers composants (électrovannes, régulateur de température,
+                <p><span>Politage du système: </span>L'ensemble est contrôlé par un Arduino, qui active divers composants (électrovannes, régulateur de température,
                     pompe, hélice) par relais et MOSFET pour les signaux PWM, assurant ainsi une régulation précise et une
                     synchronisation des étapes de capture.
                 </p>
-                <img src="../images/Eolienne/Systeme Capture Reel.png" alt="Image étape 4" class="step-image">
-                <img src="../images/Eolienne/Relais PWM.png" alt="Image étape 4" class="step-image">
+                <div class="step-images-container">
+                    <img src="../images/Eolienne/Systeme Capture Reel.png" alt="Image étape 4" class="step-image" id="test">
+                    <img src="../images/Eolienne/Relais PWM.png" alt="Image étape 4" class="step-image" id="electronique">
+                </div>
             </div>
         </section>
         <h3>Conclusion</h3>

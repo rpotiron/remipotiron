@@ -18,8 +18,9 @@ header nav {
     width: 1354px;
 }
 
-.project-context {
+header p {
     font-weight: bold;
+    color:#fff;
 }
 
 main {
@@ -57,7 +58,7 @@ h3 {
 
 .project-context, .project-summary {
     font-size: 1.1em;
-    color: #333333;
+    /*color: #333333;*/
 }
 
 .project-summary {
@@ -77,9 +78,14 @@ h3 {
 
 /* Style pour chaque étape */
 .step {
-    display: flex;
-    align-items: center; /* Aligne verticalement l'image et le texte */
-    margin-bottom: 30px;
+    /*display: flex;*/
+    /*align-items: center;*/ /* Aligne verticalement l'image et le texte */
+    /*margin-bottom: 30px;*/
+}
+
+span {
+    font-weight: bold;
+    font-size: 1.1em;
 }
 
 /* Texte des étapes */
@@ -88,8 +94,16 @@ h3 {
     color: #333333;
     line-height: 1.6;
     margin-right: 15px; /* Espace entre le texte et l'image */
-    flex: 1; /* Permet au texte de prendre tout l'espace restant à gauche */
+    /*flex: 1;*/ /* Permet au texte de prendre tout l'espace restant à gauche */
     text-align: justify;
+    margin-bottom: 10px;
+}
+
+.step-images-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 10px;
 }
 
 /* Image flottante à droite de chaque étape */
@@ -99,8 +113,35 @@ h3 {
     border-radius: 8px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Ombre légère */
     margin-left: 10px;
+    margin-right: 10px;
 }
 
 #conclusion {
     margin-bottom: 20px;
+}
+
+/* IMAGES */
+
+#onshape {
+    width: 200px;
+}
+
+#intérieur {
+
+}
+
+#eolienne {
+
+}
+
+#moteur {
+    width: 400px;
+}
+
+#test {
+
+}
+
+#electronique {
+    width: 300px;
 }
