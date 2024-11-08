@@ -1,0 +1,86 @@
+/* Style pour le logo */
+.logo {
+    width: 150px; /* Ajuste la taille selon vos besoins */
+    height: auto; /* Conserve le ratio d’aspect */
+    vertical-align: middle; /* Centre le logo verticalement par rapport au texte */
+    margin-right: 10px; /* Espace entre le logo et le texte */
+    float: left; /* Aligne le logo à gauche */
+}
+
+.email-link {
+    display: block;
+    margin-top: 10px;
+    font-size: 1em;
+    color: #ffffff; /* Couleur blanche pour le lien de contact */
+    text-decoration: none;
+}
+
+.email-link:hover {
+    color: #cce4f6; /* Légèrement plus clair au survol */
+}
+
+
+/* Projects Overview */
+#projets-personnels {
+    margin-bottom: 30px; /* Espacement entre les différentes sections */
+}
+
+.projects-overview + .projects-overview {
+    margin-top: 40px; /* Ajoute un espace plus grand entre les deux sections */
+}
+
+.projects-overview h2 {
+    text-align: center;
+    margin-bottom: 20px;
+    font-size: 2em;
+    color: #3a7ca5; /* Titre en bleu */
+}
+
+
+/* Liste de projets */
+.projects-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+}
+
+.project-card {
+    background-color: #ffffff; /* Fond blanc pour les cartes */
+    border: 1px solid #d3d3d3; /* Bordure grise */
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    width: 300px;
+    text-decoration: none;
+    color: #000; /* Écriture en noir */
+    transition: transform 0.2s;
+}
+
+.project-card:hover {
+    transform: translateY(-5px);
+}
+
+.project-image {
+    width: 100%;
+    height: 180px;
+    object-fit: cover;
+}
+
+.project-card h3 {
+    padding: 10px;
+    font-size: 1.5em;
+    color: #3a7ca5; /* Titre de projet en bleu */
+}
+
+.project-card p {
+    padding: 0 10px 20px;
+    font-size: 1em;
+}
+
+.project-date {
+    font-size: 0.9em;
+    color: #3a7ca5; /* Couleur bleue pour la date */
+    font-weight: bold;
+    margin: 5px 10px;
+}

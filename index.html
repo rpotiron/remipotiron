@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio - Rémi Potiron</title>
+    <link rel="stylesheet" href="common_style.css">
+    <link rel="stylesheet" href="index_style.css">
+</head>
+<body>
+    <header>
+        <div class="header-content">
+            <img src="images/Logo-EcoleCentrale-tout-blanc-RVB.png" alt="Logo" class="logo">
+            <h1>Remi Potiron Portfolio | Engineer from Ecole Centrale de Lille</h1>
+            <button class="language-toggle" onclick="toggleLanguage()">FR | EN</button>
+            <!--<p>Engineer from Ecole Centrale de Lille Portfolio</p>-->
+            <a href="mailto:remi.potiron@example.com" class="email-link">Contact: remi.potiron@centrale.centralelille.fr</a>
+        </div>
+    </header>
+    <main>
+        <section id="projets-personnels" class="projects-overview">
+            <h2>Projets</h2>
+            <div class="projects-list">
+                <a href="Eolienne/eolienne.html" class="project-card">
+                    <img src="images/Eolienne/Chambre capture.jpg" alt="Éolienne" class="project-image">
+                    <h3>Éolienne Captatrice de CO₂</h3>
+                    <p>Projet académique pour Hive Electric en équipe de 12 étudiants.</p>
+                    <p class="project-date">oct 2020 - fév 2022</p>
+                </a>
+                <a href="Bateau/bateau.html" class="project-card">
+                    <img src="images/Bateau/Bateau_seul.png" alt="bateau" class="project-image">
+                    <h3>Bateau</h3>
+                    <p>Conception et fabrication d'un bateau pilotable et autonome collecteur de déchets.</p>
+                    <p class="project-date">Dec. 2023 - Juil. 2024</p>
+                </a>
+                <a href="robotique.html" class="project-card">
+                    <img src="images/robotique.jpg" alt="Robotique Collaborative" class="project-image">
+                    <h3>Robotique Collaborative</h3>
+                    <p>Développement de solutions robotiques pour la collaboration industrielle.</p>
+                    <p class="project-date">Jan. 2024 - Mars 2024</p>
+                </a>
+                <a href="hackathon.html" class="project-card">
+                    <img src="images/Hackathon/Duo_Robots.jpg" alt="Hackathon" class="project-image">
+                    <h3>Hackathon</h3>
+                    <p>Participation à un hackathon pour la création de solutions innovantes.</p>
+                    <p class="project-date">16-18 Février 2024</p>
+                </a>
+                <!-- Ajouter plus de cartes projet si nécessaire -->
+            </div>
+        </section>
+        <!-- Section des Projets Professionnels -->
+        <section id="projets-professionnels" class="projects-overview">
+            <h2>Expériences Professionnelles</h2>
+            <p class="confidentiality-note">Les projets professionnels peuvent être moins détaillés en raison des exigences de confidentialité et de respect des données de l'entreprise.</p>
+            <div class="projects-list">
+                <div class="project-card">
+                    <img src="images/Barrage/IMG_20220713_120813.jpg" alt="Professional Project Image" class="project-image">
+                    <h3>Industrie caoutchoutière</h3>
+                    <p class="project-date">Mars 2022 - Juillet 2022</p>
+                    <p>Stage de césure en tant que Chef de Projet</p>
+                </div>
+                <!-- Autres cartes de projets professionnels -->
+            </div>
+        </section>
+    </main>
+    <footer>
+        <p>&copy; 2024 Rémi Potiron. Tous droits réservés.</p>
+    </footer>
+
+    <script src="script.js"></script>
+
+</body>
+</html>

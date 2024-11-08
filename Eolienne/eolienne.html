@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Éolienne Captatrice de CO₂</title>
+    <link rel="stylesheet" href="../common_style.css">
+    <link rel="stylesheet" href="eolienne_style.css">
+</head>
+<body>
+    <header>
+        <div class="header-content header-content-projects">
+            <img id="hive-logo" src="../images/Eolienne/hive_logo.png" alt="Logo">
+            <h1>Éolienne Captatrice de CO₂</h1>
+            <p class="project-context">Projet étudiant pour Hive Electric (octobre 2020 - février 2022)</p>
+            <nav><a href="../index.html">Retour à l'accueil</a></nav>
+        </div>
+    </header>
+    <main>
+        <section class="project-intro">
+            <h3>Présentation et objectifs</h3>
+            <img src="../images/Eolienne/equipe_projet_g1g2.jpg" alt="Éolienne" class="project-main-image">
+            <section class="project-intro-text">
+                <p class="project-summary">Ce projet académique a été mené en collaboration avec une équipe de 12 étudiants pour l'entreprise Hive Electric,
+                    spécialisée dans les batteries à base de matériaux non critiques. Le projet consistait à développer un prototype
+                    intégrant une éolienne et un système de capture de CO₂, pour démontrer l’utilisation innovante des batteries de Hive
+                    Electric.</p>
+                <p class="project-summary">Mon rôle principal a porté sur l’architecture du système et la conception de l’instrument de capture de CO₂,
+                    cœur de l’innovation du projet. Le prototype a été conçu dans son intégralité par notre équipe, capable de
+                    capturer un gaz concentré à plus de 50% en CO₂, ce qui constituait une grande réussite pour Hive Electric.</p>
+            </section>
+        </section>
+
+        <div class="video-container" clear="both">
+            <h3>Vidéo de démonstration</h3>
+            <video controls width="600">
+                <source src="../videos/Vidéo Projet G1-G2.mp4" type="video/mp4">
+                Votre navigateur ne supporte pas la balise vidéo.
+            </video>
+        </div>
+        
+        <section class="project-steps">
+            <h3>Étapes de Conception</h3>
+            <div class="step">
+                <p>Hive Electric avait une idée initiale relativement ouverte du projet, ce qui a permis à l'équipe de débuter
+                    avec une étude bibliographique détaillée pour explorer les technologies envisageables et étoffer le cahier
+                    des charges.
+                </p>
+            </div>
+            <div class="step">
+                <p>Après une comparaison des différentes technologies, nous avons opté pour une éolienne à axe vertical et un système
+                    de capture de CO₂ basé sur des matériaux microporeux. Les techniques de capture existantes étant principalement
+                    conçues pour de grandes échelles, cette innovation nécessitait donc un design entièrement nouveau.
+                </p>
+            </div>
+            <div class="step">
+                <p>Parmi les matériaux possibles, le charbon actif s’est révélé le plus rentable et performant. Pour améliorer son
+                    absorption, nous l’avons dopé avec une solution d’amines, ce qui s’est avéré efficace lors des tests expérimentaux.
+                </p>
+            </div>
+            <div class="step">
+                <p>Le principe et le dimensionnement du système a découlé du choix d'utiliser du charbon actif.
+                    Le système fonctionne par cycles d’absorption et de désorption. L’air traverse d'abord le matériau grâce à
+                    une hélice. Ensuite, pour désorber le CO₂, une mise sous vide de la chambre
+                    de capture accompagnée d'un chauffage décompose les liaisons chimiques du CO₂, permettant son stockage dans
+                    un ballon via un pompage.
+                    Les différentes entrées/sorties de gaz sont assurées par des électro-vannes.
+                    C'est avec ce principe que le dimensionnement des différents composants a été calculé, ce qui permet de déduire
+                    la capacité nécessaire pour la batterie de Hive Electric à intégrer au système, ainsi que la puissance à fournir
+                    par l'éolienne pour maintenir un fonctionnement en continu.
+                </p>
+                <img src="../images/Eolienne/Systeme Capture.png" alt="Image étape 4" class="step-image">
+                <img src="../images/Eolienne/Intérieur Chambre.jpg" alt="Image étape 4" class="step-image">
+            </div>
+            <div class="step">
+                <p>Le dimensionnement de l’éolienne dépendait des besoins énergétiques du système de capture. La puissance requise
+                    a ainsi été définie, et la taille et le design de l’éolienne choisis en conséquence. La fabrication a été
+                    réalisée dans les ateliers de l’école, et les tests ont confirmé le bon fonctionnement du chargement de la
+                    batterie via un régulateur de charge PWM adaptant la tension de sortie de notre moteur (un
+                    générateur à aimants permanents).
+                </p>
+                <img src="../images/Eolienne/Eolienne.png" alt="Image étape 4" class="step-image">
+                <img src="../images/Eolienne/Moteur.png" alt="Image étape 4" class="step-image">
+            </div>
+            <div class="step">
+                <p>L'ensemble est contrôlé par un Arduino, qui active divers composants (électrovannes, régulateur de température,
+                    pompe, hélice) par relais et MOSFET pour les signaux PWM, assurant ainsi une régulation précise et une
+                    synchronisation des étapes de capture.
+                </p>
+                <img src="../images/Eolienne/Systeme Capture Reel.png" alt="Image étape 4" class="step-image">
+                <img src="../images/Eolienne/Relais PWM.png" alt="Image étape 4" class="step-image">
+            </div>
+        </section>
+        <h3>Conclusion</h3>
+        <p id="conclusion">Le concept a été validé avec succès, atteignant une concentration de CO₂ capté supérieure à 50%,
+            au-delà de l'objectif initial. Cependant, l'éolienne n'a pas pu être intégré pour former le système complet
+            faute de temps pour résoudre un problème lié à des frottements inattendus dans le
+            boîtier d'engrenages en impression 3D. Le projet a néanmoins permis de démontrer la faisabilité d'un système
+            innovant, exploitant les énergies renouvelables pour capturer le CO₂.
+        </p>
+
+    </main>
+    <footer>
+        <p>&copy; 2024 Rémi Potiron. Tous droits réservés.</p>
+    </footer>
+</body>
+</html>
