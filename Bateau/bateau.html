@@ -3,35 +3,142 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Éolienne pour la Capture de CO₂</title>
-    <link rel="stylesheet" href="common_style.css">
+    <title>Bateau autonome</title>
+    <link rel="stylesheet" href="../common_style.css">
+    <link rel="stylesheet" href="bateau_style.css">
 </head>
 <body>
     <header>
-        <div class="header-content">
-            <h1>Éolienne pour la Capture de CO₂</h1>
+        <div class="header-content header-content-projects">
+            <img id="centrale-logo" src="../images/Logo-EcoleCentrale-tout-blanc-RVB.png" alt="Logo">
+            <h1>Bateau autonome collecteur de déchets</h1>
+            <p class="project-context">Projet académique de dernière année (décembre 2023 - mars 2024)</p>
             <nav><a href="../index.html">Retour à l'accueil</a></nav>
         </div>
     </header>
     <main>
-        <section class="project-detail">
-            <img src="../images/Bateau/Bateau_seul.png" alt="Éolienne pour la Capture de CO₂" class="project-main-image">
-            <p>Voici une description détaillée du projet, les technologies utilisées, les défis rencontrés, etc.</p>
-            <div class="gallery">
-                <img src="images/eolienne_detail1.jpg" alt="Détail du projet" class="gallery-image">
-                <img src="images/eolienne_detail2.jpg" alt="Détail du projet" class="gallery-image">
-                <img src="images/eolienne_detail3.jpg" alt="Détail du projet" class="gallery-image">
-            </div>
+        <section class="project-intro">
+            <h3>Présentation et objectifs</h3>
+            <img src="../images/Bateau/Bateau_et_Remi.jpg" alt="Bateau et Rémi" class="project-main-image">
+            <section class="project-intro-text">
+                <p class="project-summary">Cette page présente mon projet d’intégration de dernière année à l’Ecole Centrale de Lille
+                    qui a consisté a concevoir, fabriquer et tester un bateau autonome collecteur de déchets.
+                    C’est un sujet que j’ai proposé et donc sur lequel j’ai travaillé seul associé à mon parcours Systèmes Embarqués
+                    et Cyber Physique.
+                </p>
+                <p class="project-summary">J’avais l’envie de développer un système complet, nécessitant des compétences pluridisciplinaires,
+                    en mécanique, hydrodynamique, systèmes électriques, électronique, asservissement et m’occuper aussi de la
+                    fabrication manuelle. L’objectif pour moi était donc de passer par toutes les étapes de conception,
+                    dimensionnement et fabrication sur tous ces aspects, cela représente beaucoup de points à traiter c’est
+                    pourquoi j’ai fait le choix dès le début d’aller au maximum à l’essentiel pour arriver à temps à
+                    développer un système fonctionnel, sans chercher à tout optimiser.
+                </p>
+                <p class="project-summary">Ce sujet d’un bateau autonome, en énergie et en contrôle de trajectoire, collectant des déchets
+                    m’est apparu comme très complet et intéressant pour l’utilisation finale visée.
+                </p>
+            </section>
         </section>
+
         <div class="video-container" clear="both">
             <h3>Vidéo de démonstration</h3>
             <div style="position:relative; max-width: 600px; margin: 0 auto;">
                 <div style="padding:56.25% 0 0 0;position:relative;">
-                    <iframe src="https://player.vimeo.com/video/1027629126?title=0&amp;byline=0&amp;portrait=0&amp;badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479" frameborder="0" allow="autoplay; fullscreen; picture-in-picture; clipboard-write" style="position:absolute;top:0;left:0;width:100%;height:100%;" title="Navigation Bateau">   
-                    </iframe>
+                    <iframe src="https://player.vimeo.com/video/1029713578?title=0&amp;byline=0&amp;portrait=0&amp;badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479" frameborder="0" allow="autoplay; fullscreen; picture-in-picture; clipboard-write" style="position:absolute;top:0;left:0;width:100%;height:100%;" title="Navigation Bateau"></iframe>
                 </div>
             </div>
         </div>
+        
+        <section class="project-steps">
+            <h3>Étapes de Conception</h3>
+            <div class="step">
+                <p><span>Etude bibliographique et cahier des charges: </span>Même si c'était un projet individuel avec beaucoup de
+                    liberté, il était nécessaire de commencer  par étudier ce qui existait déjà et s'approchait de mon idée de départ.
+                    Cette première phase a abouti à mon cahier des charges, en s'appuyant sur une modélisation SysML du système.
+                </p>
+            </div>
+            <div class="step">
+                <p><span>Dimensionnement: </span>La question du dimensionnement du bateau était difficile à aborder car il faut
+                    déterminer la masse du bateau. Mais la masse du bateau définit la ligne de flottaison et donc la trainée du
+                    bateau. Pour compenser cette trainée, il faut des moteurs adéquats et une batterie capable de les alimenter,
+                    mais cela a un fort impact sur la masse du bateau.
+                    Avec le cahier des charges les 2 exigences qui servaient de départ pour dimensionner le systèmes étaient les
+                    suivantes:
+                    - Un écart entre les 2 coques d’environ 35cm, ce qui correspond à la longueur d’une bouteille
+                    de plastique de 1.5 L
+                    - Le système doit être capable d’atteindre une vitesse de 1 m/s.
+                    Sans donner les détails, c'est à cette étape que la forme des coques a été définie, ce qui a permis de déduire la ligne
+                    de flottaison après avoir estimé la masse totale.
+                    La conception mécanique du système a été réalisée sur Onshape.
+                </p>
+                <div class="step-images-container">
+                    <img src="../images/Bateau/Onshape_Couches.png" alt="Image étape 4" class="step-image onshape_coque">
+                    <img src="../images/Bateau/Onshape_Ligne_Flottaison.png" alt="Image étape 4" class="step-image onshape_coque">
+                    <img src="../images/Bateau/Onshape_Coque_Batterie.png" alt="Image étape 4" class="step-image onshape_coque">
+                    <img src="../images/Bateau/Onshape_Assemblage.png" alt="Image étape 4" class="step-image" id="onshape-assemblage">
+                </div>
+            </div>
+            <div class="step">
+                <p><span>Composants: </span>La propulsion est assurée par 2 moteurs à courant continu pouvant monter jusqu'à une
+                    tension de 15V. Ils entraînent les arbres d'hélice, reliées par un cardan. La batterie choisie fourni du 12,8 V, bien comptatible avec les moteurs. Elle a une capacité
+                    de 6Ah, ce qui peut faire fonctionner les moteurs à puissance maximale pendant 1h, on estime donc la capacité
+                    d'utilisation à 2h en utilisation normale, ce qui est déjà intéressant. Elle est rechargée avec un panneau
+                    solaire de 20W par l'intermédiaire d'un controleur de charge solaire.
+                    L'objectif est que le bateau ait 2 modes de navigation: manuel et automatique. Pour la partie manuelle, elle est
+                    assurée par un émetteur et recepteur radio 2,4 GHz. Pour piloter automatiquement la trajectoire, le bateau est
+                    équipé de divers capteurs (IMU, ultrason, GPS, caméra Raspberry).
+                    La commande du système sera assurée par un arduino et un raspberry.
+                </p>
+                <div class="step-images-container">
+                    <img src="../images/Bateau/Moteur.png" alt="Image étape 4" class="step-image" id="moteur">
+                    <img src="../images/Bateau/Hélice.png" alt="Image étape 4" class="step-image" id="helice">
+                    <img src="../images/Bateau/Batterie.png" alt="Image étape 4" class="step-image" id="batterie">
+                    <img src="../images/Bateau/Solaire.png" alt="Image étape 4" class="step-image" id="solaire">
+                    <img src="../images/Bateau/Radio.png" alt="Image étape 4" class="step-image" id="radio">
+                </div>
+            </div>
+            <div class="step">
+                <p><span>Fabrication: </span>Les 2 coques ont été imprimées avec une imprimante 3D très grand format, en PET à 30%
+                    de remplissage. Pour corriger les quelques légers défauts d'impression et assurer une bonne étanchéité, les coques
+                    ont été recouvertes d'une couche d'expoxy. J'ai installé des inserts pour venir y fixer les couvercles.
+                    Avec une découpeuse laser, j'ai obtenu les couvercles en plexiglass et autres supports de composants en
+                    contreplaqué. La partie la plus délicate a été de garantir une bonne étanchéité au niveau des hélices, ce que j'ai
+                    réussi à faire en fixant la partie statique de l'ensemble avec de l'epoxy et en compressant les joints avec des
+                    ressorts, rudimentaire mais aucune fuite n'a été remarquée dans l'eau.
+                    Enfin les barres de fixation usinées en atelier permettent de laisser passer au travers des fils d'une coque
+                    à l'autre. Il y a aussi eu un certain nombre de soudures de fils électriques à réaliser.
+                </p>
+                <div class="step-images-container">
+                    <img src="../images/Bateau/Coque_Imprimee.png" alt="Image étape 4" class="step-image" id="coque-imprimee">
+                    <img src="../images/Bateau/Montage_Moteurs.png" alt="Image étape 4" class="step-image" id="montage_moteurs">
+                    <img src="../images/Bateau/Gros_Plan_Ensemble.png" alt="Image étape 4" class="step-image" id="gros_plan_ensemble">
+                </div>
+            </div>
+            <div class="step">
+                <p><span>Tests et résultats: </span>Avant de pouvoir utiliser le bateau dans l'eau, il fallait s'assurer que les coques
+                    et surtout les arbres d'hélices étaient bien étanches, que le panneau solaire était bien capable de charger
+                    la batterie, et que les hélices pouvaient être actionnées par la commande radio.
+                    L'étanchéité a été testée et validée en immergeant le bateau dans un petit bassin sans aucune électronique dans
+                    les coques. La charge de la batterie et l'actionnement des hélices ont été testés avec succès indépendamment des
+                    autres fonctions du système. L'arduino lit les signaux PWM reçus par le recepteur radio, pour ensuite envoyer
+                    les signaux PWM aux moteurs. Enfin, la bateau a pu être utilisé avec la commande radio dans l'eau comme
+                    démontrée avec la vidéo.
+                </p>
+            </div>
+        </section>
+        <h3>Conclusion</h3>
+        <p id="conclusion">Ce projet a apporté entière satisfaction grâce aux résultats prometteurs obtenus, malgré l’ambition
+            que représentait l’idée de tout réaliser par moi-même. J’ai réussi à concevoir un bateau entièrement navigable et
+            contrôlable via télécommande. Le temps très limité que j’ai eu pour ce projet ne m’a malheureusement pas permis de
+            mettre en place les fonctions de collecte de déchets et de commande autonome.
+            La collecte de déchets aurait nécessité l'ajout d’un filet prévu entre les deux coques du bateau, mais j’ai dû accorder
+            la priorité à d’autres aspects en raison du manque de temps. Quant à la commande automatique, elle aurait été très
+            intéressante à développer, d'autant plus que je disposais des capteurs nécessaires. Mon objectif était de définir des
+            points géographiques à atteindre, permettant au bateau de suivre et corriger sa trajectoire à l'aide du GPS et de l'IMU.
+            J'avais tout juste commencé cette partie, avec une acquisition correcte des données des capteurs.
+            Malgré ces limites, une grande partie du projet a été menée avec succès : la fabrication complète du bateau, son
+            contrôle par télécommande, et son autonomie énergétique grâce au panneau solaire.
+        </p>
+
     </main>
     <footer>
         <p>&copy; 2024 Rémi Potiron. Tous droits réservés.</p>

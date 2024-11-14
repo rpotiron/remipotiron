@@ -1,0 +1,147 @@
+/* header */
+#centrale-logo {
+    width: 150px; /* Ajuste la taille selon vos besoins */
+    height: auto; /* Conserve le ratio d’aspect */
+    vertical-align: middle; /* Centre le logo verticalement par rapport au texte */
+    margin-right: 10px; /* Espace entre le logo et le texte */
+    float: left; /* Aligne le logo à gauche */
+}
+
+/* Retour à l'acceuil */
+header nav {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+}
+
+.header-content-projects {
+    width: 1354px;
+}
+
+header p {
+    font-weight: bold;
+    color:#fff;
+}
+
+main {
+    padding-bottom: 50px;
+}
+
+/* Titres */
+
+h3 {
+    color: #3a7ca5;
+    font-size: 1.8em;
+    margin-top: 15px;
+    margin-bottom: 15px;
+}
+
+/* Project Detail Page */
+
+/* Section d'introduction du projet */
+.project-intro {
+    /*text-align: center;*/
+    /*margin-top: 20px;
+    margin-bottom: 40px;*/
+    /*display: flex;*/
+    vertical-align: middle; /* Aligne verticalement l'image et le texte */
+}
+
+.project-main-image {
+    max-height: 300px;
+    max-width: auto;
+    border-radius: 8px;
+    margin-bottom: 20px;
+    margin-right: 15px;
+    float: left;
+}
+
+.project-context, .project-summary {
+    font-size: 1.1em;
+    /*color: #333333;*/
+}
+
+.project-summary {
+    text-align: justify;
+}
+
+/* Insertion d'une éventuelle vidéo*/
+.video-container {
+    clear: both;
+    /*text-align: center;*/
+}
+
+/* Section des étapes */
+.project-steps {
+    margin-bottom: 0px;
+}
+
+/* Style pour chaque étape */
+.step {
+    /*display: flex;*/
+    /*align-items: center;*/ /* Aligne verticalement l'image et le texte */
+    /*margin-bottom: 30px;*/
+}
+
+span {
+    font-weight: bold;
+    font-size: 1.1em;
+}
+
+/* Texte des étapes */
+.step p {
+    font-size: 1em;
+    color: #333333;
+    line-height: 1.6;
+    margin-right: 15px; /* Espace entre le texte et l'image */
+    /*flex: 1;*/ /* Permet au texte de prendre tout l'espace restant à gauche */
+    text-align: justify;
+    margin-bottom: 10px;
+}
+
+.step-images-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+/* Image flottante à droite de chaque étape */
+.step-image {
+    width: 150px; /* Ajuster la largeur de l'image */
+    height: auto; /* Conserver le ratio de l'image */
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Ombre légère */
+    margin-left: 10px;
+    margin-right: 10px;
+}
+
+#conclusion {
+    margin-bottom: 20px;
+}
+
+/* IMAGES */
+
+#onshape {
+    width: 200px;
+}
+
+#solaire {
+    width:250px;
+}
+
+#helice {
+    width: 200px;
+}
+
+#moteur {
+    width: 150px;
+}
+
+#radio {
+    width: 250px;
+}
+
+#onshape-assemblage {
+    width:400px;
+}
