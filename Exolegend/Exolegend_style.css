@@ -1,7 +1,7 @@
 /* header */
-#centrale-logo {
-    width: 150px; /* Ajuste la taille selon vos besoins */
-    height: auto; /* Conserve le ratio d’aspect */
+#hive-logo {
+    height: 100px;
+    width:auto;
     vertical-align: middle; /* Centre le logo verticalement par rapport au texte */
     margin-right: 10px; /* Espace entre le logo et le texte */
     float: left; /* Aligne le logo à gauche */
@@ -126,43 +126,22 @@ span {
     width: 200px;
 }
 
-#solaire {
-    width:250px;
+#intérieur {
+
 }
 
-#helice {
-    width: 200px;
+#eolienne {
+
 }
 
 #moteur {
-    width: 150px;
+    width: 400px;
 }
 
-#radio {
-    width: 250px;
+#test {
+
 }
 
-#onshape-assemblage {
-    width:400px;
-}
-
-#coque-imprimee {
-    width:300px;
-}
-
-#montage-moteurs {
-    width:250px;
-}
-
-#gros-plan-ensemble {
-    width:300px;
-}
-
-figcaption {
-    text-align: center;
-    font-style: italic;
-}
-
-#conclusion {
-    text-align:justify;
+#electronique {
+    width: 300px;
 }
