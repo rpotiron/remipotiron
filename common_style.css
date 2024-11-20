@@ -37,6 +37,15 @@ header {
     font-size: 1.2em;
 }*/
 
+/* Style pour le logo */
+.logo {
+    width: 150px; /* Ajuste la taille selon vos besoins */
+    height: auto; /* Conserve le ratio d’aspect */
+    position: absolute;
+    top: 20px;
+    left: 20px;
+}
+
 /* Bouton de changement de langue */
 .language-toggle {
     position: absolute;

@@ -1,0 +1,37 @@
+/* header */
+#musthane-logo {
+    width:100px;
+    top:45px;
+    left:40px;
+}
+
+/* IMAGES */
+
+#BUSI-face {
+    width:220px;
+}
+
+#BUSI-profil {
+    width:300px;
+}
+
+#réservoirs {
+    width:450px;
+}
+
+#barrage {
+    width:600px;
+}
+
+#vessie {
+    width: 300px;
+}
+
+figcaption {
+    text-align: center;
+    font-style: italic;
+}
+
+#conclusion {
+    text-align:justify;
+}
