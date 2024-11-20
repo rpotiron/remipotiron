@@ -2,21 +2,9 @@
 .logo {
     width: 150px; /* Ajuste la taille selon vos besoins */
     height: auto; /* Conserve le ratio d’aspect */
-    vertical-align: middle; /* Centre le logo verticalement par rapport au texte */
-    margin-right: 10px; /* Espace entre le logo et le texte */
-    float: left; /* Aligne le logo à gauche */
-}
-
-.email-link {
-    display: block;
-    margin-top: 10px;
-    font-size: 1em;
-    color: #ffffff; /* Couleur blanche pour le lien de contact */
-    text-decoration: none;
-}
-
-.email-link:hover {
-    color: #cce4f6; /* Légèrement plus clair au survol */
+    position: absolute;
+    top: 20px;
+    left: 20px;
 }
 
 
@@ -83,4 +71,10 @@
     color: #3a7ca5; /* Couleur bleue pour la date */
     font-weight: bold;
     margin: 5px 10px;
+}
+
+#linkedin {
+    position:absolute;
+    bottom:56px;
+    left: 1060px;
 }

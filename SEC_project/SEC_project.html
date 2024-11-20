@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Flotte de robots</title>
     <link rel="stylesheet" href="../common_style.css">
+    <link rel="stylesheet" href="../project_common_style.css">
     <link rel="stylesheet" href="SEC_project_style.css">
 </head>
 <body>
@@ -17,8 +18,10 @@
         </div>
     </header>
     <main>
+        <h3>Présentation et objectifs</h3>
         <section class="project-intro">
-            <h3>Présentation et objectifs</h3>
+            
+            <img src="../images/SEC_project/robot.png" alt="robot" class="project-main-image">
             <section class="project-intro-text">
                 <p class="project-summary">Ce projet académique, réalisé en équipe de trois, synthétise les enseignements de ma
                     spécialisation en systèmes embarqués et cyber-physiques. L’objectif était de gérer des commandes d’articles dans
@@ -31,72 +34,64 @@
         <section class="project-steps">
             <h3>Étapes du projet</h3>
             <div class="step">
-                <p>Hive Electric avait une idée initiale relativement ouverte du projet, ce qui a permis à l'équipe de débuter
-                    avec une étude bibliographique détaillée pour explorer les technologies envisageables et étoffer le cahier
-                    des charges.
-                </p>
-            </div>
-            <div class="step">
-                <p><span>Etude des options technologiques: </span>Après une comparaison des différentes technologies, nous avons opté pour une éolienne à axe vertical et un système
-                    de capture de CO₂ basé sur des matériaux microporeux. Les techniques de capture existantes étant principalement
-                    conçues pour de grandes échelles, cette innovation nécessitait donc un design entièrement nouveau.
-                </p>
-            </div>
-            <div class="step">
-                <p><span>Choix du matériau absorbant: </span>Parmi les matériaux possibles, le charbon actif s’est révélé le plus rentable et performant. Pour améliorer son
-                    absorption, nous l’avons dopé avec une solution d’amines, ce qui s’est avéré efficace lors des tests expérimentaux.
-                </p>
-            </div>
-            <div class="step">
-                <p><span>Dimensionnement du système de capture: </span>Le principe et le dimensionnement du système a découlé du choix d'utiliser du charbon actif.
-                    Le système fonctionne par cycles d’absorption et de désorption. L’air traverse d'abord le matériau grâce à
-                    une hélice, ce qui permet d'absorber le CO₂. Ensuite, pour désorber le CO₂, une mise sous vide de la chambre
-                    de capture accompagnée d'un chauffage décompose les liaisons chimiques du CO₂ avec le matériau absorbant, permettant son stockage dans
-                    un ballon via un pompage.
-                    Les différentes entrées/sorties de gaz sont assurées par des électro-vannes.
-                    C'est avec ce principe que le dimensionnement des différents composants a été calculé, ce qui permet de déduire
-                    la capacité nécessaire pour la batterie de Hive Electric à intégrer au système, ainsi que la puissance à fournir
-                    par l'éolienne pour maintenir un fonctionnement en continu.
+                <p><span>Modélisation système: </span>Nous avons abordés le sujet en faisant une modélisation du système "flotte 
+                de robots" en SysML sur le logiciel Papyrus (Eclispe). Cela nous a permis de définir les exigences du système
+                ainsi que de décomposer au mieux le problème avant de proposer les solutions techniques.
                 </p>
                 <div class="step-images-container">
-                    <img src="../images/Eolienne/Systeme Capture.png" alt="Image étape 4" class="step-image" id="onshape">
-                    <img src="../images/Eolienne/Intérieur Chambre.jpg" alt="Image étape 4" class="step-image" id="interieur">
+                    <img src="../images/SEC_project/Diagramme_cas_utilisation.png" alt="Image étape 4" class="step-image" id="SysML">
                 </div>
             </div>
             <div class="step">
-                <p><span>Eolienne et batterie: </span>Le dimensionnement de l’éolienne dépendait des besoins énergétiques du système de capture. La puissance requise
-                    a ainsi été définie, et la taille et le design de l’éolienne choisis en conséquence. La fabrication a été
-                    réalisée dans les ateliers de l’école, et les tests ont confirmé le bon fonctionnement du chargement de la
-                    batterie via un régulateur de charge PWM adaptant la tension de sortie de notre moteur (un
-                    générateur à aimants permanents).
+                <p><span>Architecture: </span>Notre système est distribué en plusieurs sous-systèmes interconnectés qui communiquent
+                    en temps réel via des sockets. Chaque sous-système peut inclure plusieurs threads s'exécutant en parallèle.<br>
+                    L'unité centrale, un PC, reçoit une liste d'articles ainsi que les positions des robots, obtenues grâce à un
+                    système de triangulation basé sur des émetteurs-récepteurs radio. Ces informations permettent au PC de calculer
+                    les trajectoires optimales pour les robots.<br>
+                    Chaque robot est équipé d'une Raspberry Pi et d'un Arduino. La Raspberry Pi reçoit le path planning
+                    (planification de trajectoire) depuis le PC, puis le transmet à l'Arduino via une communication série UART.
+                    L'Arduino pilote les moteurs et utilise un algorithme de contrôle pour suivre la trajectoire définie avec précision.
                 </p>
                 <div class="step-images-container">
-                    <img src="../images/Eolienne/Eolienne.png" alt="Image étape 4" class="step-image" id="eolienne">
-                    <img src="../images/Eolienne/Moteur.png" alt="Image étape 4" class="step-image" id="moteur">
+                    <img src="../images/SEC_project/Schéma_architecture.png" alt="Image étape 4" class="step-image" id="architecture">
                 </div>
             </div>
             <div class="step">
-                <p><span>Pilotage du système: </span>L'ensemble est contrôlé par un Arduino, qui active divers composants (électrovannes, régulateur de température,
-                    pompe, hélice) par relais et MOSFET pour les signaux PWM, assurant ainsi une régulation précise et une
-                    synchronisation des étapes de capture.
+                <p><span>Path planning: </span>L'espace est discrétisé et un algorithme basé sur Dijkstra est utilisé, avec des
+                    mises à jour dynamiques en cas de fin de commande ou de rencontre d'obstacle. <br>
+                    La logique de path planning a été testée à l'aide d'un simulateur développé en Python avec la bibliothèque Pygame.
                 </p>
                 <div class="step-images-container">
-                    <img src="../images/Eolienne/Systeme Capture Reel.png" alt="Image étape 4" class="step-image" id="test">
-                    <img src="../images/Eolienne/Relais PWM.png" alt="Image étape 4" class="step-image" id="electronique">
+                    <img src="../images/SEC_project/simulateur.png" alt="Image étape 4" class="step-image" id="simulateur">
+                </div>
+            </div>
+            <div class="step">
+                <p><span>Asservissement: </span>Le contrôle de la vitesse des robots est fait par retour d'état et le contrôle en
+                    position avec un simple PID.
+                </p>
+                <div class="step-images-container">
+                    <img src="../images/SEC_project/vitesse_moteur.png" alt="Image étape 4" class="step-image" id="vitesse">
+                    <img src="../images/SEC_project/trajectoire.png" alt="Image étape 4" class="step-image" id="trajectoire">
                 </div>
             </div>
         </section>
         <h3>Conclusion</h3>
-        <p id="conclusion">Le concept a été validé avec succès, atteignant une concentration de CO₂ capté supérieure à 50%,
-            au-delà de l'objectif initial. Cependant, l'éolienne n'a pas pu être intégrée pour former le système complet
-            faute de temps pour résoudre un problème lié à des frottements inattendus dans le
-            boîtier d'engrenages en impression 3D. Le projet a néanmoins permis de démontrer la faisabilité d'un système
-            innovant, exploitant les énergies renouvelables pour capturer le CO₂.
+        <p id="conclusion">Au terme du projet, l'architecture centralisée a bien fonctionné, avec des communications efficaces
+            entre les différents sous-systèmes. Le simulateur a validé nos concepts de path planning, et en test réel, le suivi
+            de trajectoire par odométrie a montré des performances satisfaisantes.<br>
+            Cependant, nous n'avons pas pu intégrer la mesure du système de triangulation lors des tests réels, car ce dernier
+            s'est révélé peu performant. Il nécessiterait un filtrage que nous n'avons pas eu le temps d'implémenter, mais qui
+            constituerait une amélioration essentielle pour le futur.
         </p>
-
     </main>
     <footer>
-        <p>&copy; 2024 Rémi Potiron. Tous droits réservés.</p>
+        <div class="footer-content">
+            <img src="../images/mail.png" alt="Logo" id="mail">
+            <p>remi.potiron@centrale.centralelille.fr   |</p>
+            <a href="https://www.linkedin.com/in/r%C3%A9mi-potiron-029096202/" target="_blank" id="linkedin">
+                <img src="../images/linkedin.png" alt="Logo" >
+            </a>
+        </div>
     </footer>
 </body>
 </html>

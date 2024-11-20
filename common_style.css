@@ -19,7 +19,7 @@ header {
     padding: 20px;
     text-align: center;
     position: sticky; /* Fixe le header */
-    display: flex;
+    /*display: flex;*/
     top: 0;
     left: 0;
     width: 100%;
@@ -79,10 +79,32 @@ footer {
     color: #fff; /* Écriture en blanc */
     text-align: center;
     padding: 10px;
-    font-size: 0.9em;
+    font-size: 1.1em;
     position: fixed; /* Positionnement fixe */
     bottom: 0;
     left: 0;
     width: 100%;
     z-index: 10;
+}
+
+.footer-content {
+    /*display: flex;*/
+    /*align-items: center; /* Centrer verticalement */
+    justify-content: center; /* Centrer horizontalement */
+    gap: 10px; /* Espacement entre les éléments */
+}
+
+.footer-content img {
+    width: 25px; /* Ajuster la taille des icônes */
+    height: auto;
+}
+
+.footer-content p {
+    margin: 0; /* Supprime les marges par défaut */
+}
+
+#mail {
+    position:absolute;
+    bottom:14px;
+    left:750px;
 }
