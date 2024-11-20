@@ -1,0 +1,21 @@
+/* header */
+#musthane-logo {
+    width:100px;
+    top:45px;
+    left:40px;
+}
+
+/* IMAGES */
+
+#NASA {
+    width:500px;
+}
+
+figcaption {
+    text-align: center;
+    font-style: italic;
+}
+
+#conclusion {
+    text-align:justify;
+}
