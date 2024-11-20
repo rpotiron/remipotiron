@@ -3,112 +3,85 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Éolienne Captatrice de CO₂</title>
+    <title>Flotte de robots</title>
     <link rel="stylesheet" href="../common_style.css">
+    <link rel="stylesheet" href="../project_common_style.css">
     <link rel="stylesheet" href="Exolegend_style.css">
 </head>
 <body>
     <header>
         <div class="header-content header-content-projects">
-            <img id="hive-logo" src="../images/Eolienne/hive_logo.png" alt="Logo">
-            <h1>Éolienne Captatrice de CO₂</h1>
-            <p class="project-context">Projet étudiant pour Hive Electric (octobre 2020 - février 2022)</p>
+            <img id="centrale-logo" src="../images/Exolegend/logo_exolegend.png" alt="Logo" id="logo-exolegend">
+            <h1>Hackathon Exolegend - Combat de Robots</h1>
+            <p class="project-context">Organisé par Exotec à Lille (février 2024)</p>
             <nav><a href="../index.html">Retour à l'accueil</a></nav>
         </div>
     </header>
     <main>
+        <h3>Le concept</h3>
         <section class="project-intro">
-            <h3>Présentation et objectifs</h3>
-            <img src="../images/Eolienne/equipe_projet_g1g2.jpg" alt="Éolienne" class="project-main-image">
+            
+            <img src="../images/Exolegend/Spectateurs.jpeg" alt="robot" class="project-main-image">
             <section class="project-intro-text">
-                <p class="project-summary">Ce projet académique a été mené en collaboration avec une équipe de 12 étudiants pour l'entreprise Hive Electric,
-                    spécialisée dans les batteries à base de matériaux non critiques. Le projet consistait à développer un prototype
-                    intégrant une éolienne et un système de capture de CO₂, pour démontrer l’utilisation innovante des batteries de Hive
-                    Electric.</p>
-                <p class="project-summary">Mon rôle principal a porté sur l’architecture du système et la conception de l’instrument de capture de CO₂,
-                    cœur de l’innovation du projet. Le prototype a été conçu dans son intégralité par notre équipe, capable de
-                    capturer un gaz concentré à plus de 50% en CO₂, ce qui constituait une grande réussite pour Hive Electric.</p>
+                <p class="project-summary">J’ai participé à Exolegend, un hackathon de robotique organisé par Exotec. En équipe
+                    de trois, nous avons programmé en C++ deux robots mobiles pendant deux jours et deux nuits intensifs, concevant
+                    des stratégies d’attaque et de défense optimales. Le dernier jour, nos robots ont affronté ceux des 50 autres
+                    équipes participantes dans une arène interactive projetant un environnement virtuel au sol.
+                </p>
             </section>
         </section>
-
-        <div class="video-container" clear="both">
-            <h3>Vidéo de démonstration</h3>
-            <div style="position:relative; max-width: 600px; margin: 0 auto;">
-                <div style="padding:56.25% 0 0 0;position:relative;">
-                    <iframe src="https://player.vimeo.com/video/1027631400?title=0&amp;byline=0&amp;portrait=0&amp;badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479" frameborder="0" allow="autoplay; fullscreen; picture-in-picture; clipboard-write" style="position:absolute;top:0;left:0;width:100%;height:100%;" title="Vidéo Projet G1-G2"></iframe>
-                </div>
-            </div>
-        </div>
         
         <section class="project-steps">
-            <h3>Étapes de Conception</h3>
+            <h3>Développement et stratégie</h3>
             <div class="step">
-                <p>Hive Electric avait une idée initiale relativement ouverte du projet, ce qui a permis à l'équipe de débuter
-                    avec une étude bibliographique détaillée pour explorer les technologies envisageables et étoffer le cahier
-                    des charges.
-                </p>
-            </div>
-            <div class="step">
-                <p><span>Etude des options technologiques: </span>Après une comparaison des différentes technologies, nous avons opté pour une éolienne à axe vertical et un système
-                    de capture de CO₂ basé sur des matériaux microporeux. Les techniques de capture existantes étant principalement
-                    conçues pour de grandes échelles, cette innovation nécessitait donc un design entièrement nouveau.
-                </p>
-            </div>
-            <div class="step">
-                <p><span>Choix du matériau absorbant: </span>Parmi les matériaux possibles, le charbon actif s’est révélé le plus rentable et performant. Pour améliorer son
-                    absorption, nous l’avons dopé avec une solution d’amines, ce qui s’est avéré efficace lors des tests expérimentaux.
-                </p>
-            </div>
-            <div class="step">
-                <p><span>Dimensionnement du système de capture: </span>Le principe et le dimensionnement du système a découlé du choix d'utiliser du charbon actif.
-                    Le système fonctionne par cycles d’absorption et de désorption. L’air traverse d'abord le matériau grâce à
-                    une hélice, ce qui permet d'absorber le CO₂. Ensuite, pour désorber le CO₂, une mise sous vide de la chambre
-                    de capture accompagnée d'un chauffage décompose les liaisons chimiques du CO₂ avec le matériau absorbant, permettant son stockage dans
-                    un ballon via un pompage.
-                    Les différentes entrées/sorties de gaz sont assurées par des électro-vannes.
-                    C'est avec ce principe que le dimensionnement des différents composants a été calculé, ce qui permet de déduire
-                    la capacité nécessaire pour la batterie de Hive Electric à intégrer au système, ainsi que la puissance à fournir
-                    par l'éolienne pour maintenir un fonctionnement en continu.
+                <p><span>Point sur les règles: </span>Chaque équipe dispose de deux robots pour une bataille de territoire dans
+                    une arène de 3 mètres projetée au sol. L’objectif est de contrôler un maximum de cases en 2 minutes.<br>
+                    Un système central intégré à l’arène suit les positions des robots grâce à une caméra, actualise la couleur des cases et gère les
+                    interactions avec les éléments virtuels. Chaque robot a un ballon représentant sa vie: s’il éclate, le système central
+                    détecte sa destruction et l’arrête. Les robots peuvent attaquer avec une lance ou ramasser des fusées au sol pour
+                    éliminer leurs adversaires. Une fois dans l'arène, les robots sont en pilote automatique.
                 </p>
                 <div class="step-images-container">
-                    <img src="../images/Eolienne/Systeme Capture.png" alt="Image étape 4" class="step-image" id="onshape">
-                    <img src="../images/Eolienne/Intérieur Chambre.jpg" alt="Image étape 4" class="step-image" id="interieur">
+                    <img src="../images/Exolegend/Duo_Robots.jpg" alt="Image étape 4" class="step-image" id="Robots">
                 </div>
             </div>
             <div class="step">
-                <p><span>Eolienne et batterie: </span>Le dimensionnement de l’éolienne dépendait des besoins énergétiques du système de capture. La puissance requise
-                    a ainsi été définie, et la taille et le design de l’éolienne choisis en conséquence. La fabrication a été
-                    réalisée dans les ateliers de l’école, et les tests ont confirmé le bon fonctionnement du chargement de la
-                    batterie via un régulateur de charge PWM adaptant la tension de sortie de notre moteur (un
-                    générateur à aimants permanents).
+                <p><span>Contrôle de trajectoire: </span>Le développement en C++ s’articulait autour de deux aspects principaux :
+                    le suivi de trajectoire et la stratégie attaque-défense. La première étape a consisté à coder l’asservissement
+                    en trajectoire pour déplacer les robots efficacement d’un point A à un point B. Grâce à l’API fournie par Exotec,
+                    nous avions accès aux positions des robots et aux caractéristiques du terrain (murs, poison, roquettes, etc.),
+                    simplifiant ainsi l’acquisition des données. Cependant, l’asservissement restait un défi majeur pour assurer
+                    rapidité et précision.
                 </p>
-                <div class="step-images-container">
-                    <img src="../images/Eolienne/Eolienne.png" alt="Image étape 4" class="step-image" id="eolienne">
-                    <img src="../images/Eolienne/Moteur.png" alt="Image étape 4" class="step-image" id="moteur">
-                </div>
             </div>
             <div class="step">
-                <p><span>Pilotage du système: </span>L'ensemble est contrôlé par un Arduino, qui active divers composants (électrovannes, régulateur de température,
-                    pompe, hélice) par relais et MOSFET pour les signaux PWM, assurant ainsi une régulation précise et une
-                    synchronisation des étapes de capture.
+                <p><span>Stratégie: </span>La deuxième étape portait sur la stratégie, nécessitant une réflexion approfondie pour
+                    équilibrer attaque et défense et permettre à nos robots de prendre les meilleures décisions. Cette stratégie
+                    déterminait leurs actions : déplacements, tirs de roquettes, etc. Nous avons conçu une heuristique optimisée,
+                    testée grâce à un simulateur reproduisant des matchs virtuels. Cette heuristique intégrait tous les éléments
+                    dynamiques de l'arène (robots adverses, murs, roquettes, etc.) pour évaluer différentes options et choisir celle
+                    offrant le meilleur score, traduite ensuite en ordres exécutés par nos robots en temps réel.
                 </p>
                 <div class="step-images-container">
-                    <img src="../images/Eolienne/Systeme Capture Reel.png" alt="Image étape 4" class="step-image" id="test">
-                    <img src="../images/Eolienne/Relais PWM.png" alt="Image étape 4" class="step-image" id="electronique">
+                    <img src="../images/Exolegend/Combat.jpg" alt="Image étape 4" class="step-image" id="Combat">
                 </div>
             </div>
         </section>
         <h3>Conclusion</h3>
-        <p id="conclusion">Le concept a été validé avec succès, atteignant une concentration de CO₂ capté supérieure à 50%,
-            au-delà de l'objectif initial. Cependant, l'éolienne n'a pas pu être intégrée pour former le système complet
-            faute de temps pour résoudre un problème lié à des frottements inattendus dans le
-            boîtier d'engrenages en impression 3D. Le projet a néanmoins permis de démontrer la faisabilité d'un système
-            innovant, exploitant les énergies renouvelables pour capturer le CO₂.
+        <p id="conclusion">Nous avons terminé 11ème sur 50, principalement en raison de la lenteur de nos robots. En effet, nous
+            avons privilégié l'élaboration d'une stratégie solide, mais avons sous-estimé l'importance d'un suivi de trajectoire
+            plus performant, ce qui nous a limités face aux meilleures équipes. Malgré cela, l'expérience a été très amusante et
+            enrichissante sur le plan technique.
         </p>
-
     </main>
     <footer>
-        <p>&copy; 2024 Rémi Potiron. Tous droits réservés.</p>
+        <div class="footer-content">
+            <img src="../images/mail.png" alt="Logo" id="mail">
+            <p>remi.potiron@centrale.centralelille.fr   |</p>
+            <a href="https://www.linkedin.com/in/r%C3%A9mi-potiron-029096202/" target="_blank" id="linkedin">
+                <img src="../images/linkedin.png" alt="Logo" >
+            </a>
+        </div>
     </footer>
 </body>
 </html>
